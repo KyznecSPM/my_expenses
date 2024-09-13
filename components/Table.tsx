@@ -5,7 +5,7 @@ import actionBagIcon from '@/assets/action-bag.svg';
 import actionEditIcon from '@/assets/action-edit.svg';
 import { numericFormatter } from 'react-number-format';
 
-const sumFormat = (value: number) =>
+const sumFormat = (value: number = 0) =>
   numericFormatter(`${value}`, {
     thousandSeparator: ' ',
     suffix: ' ₽',
