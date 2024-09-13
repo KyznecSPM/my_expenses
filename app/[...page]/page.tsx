@@ -11,25 +11,25 @@ const formTitle = 'Новый расход';
 
 export default function Home() {
   return (
-    <div className='flex flex-col'>
+    <div className='flex min-w-[750px] flex-col'>
       <header className='h-[64px] w-full bg-white'>
-        <div className='relative mx-auto flex h-full w-full max-w-[1200px] justify-around'>
-          <div className='absolute bottom-0 left-0 top-0 flex items-center'>
+        <div className='relative mx-auto flex h-full w-full max-w-[1264px] justify-around'>
+          <div className='absolute bottom-0 left-[32px] top-0 flex items-center'>
             <Image priority src={logoIcon} alt='Logo' />
           </div>
           <Tabs />
-          <div className='absolute bottom-0 right-0 top-0 flex items-center font-semibold'>
+          <div className='absolute bottom-0 right-[32px] top-0 flex items-center font-semibold'>
             <button className='h-[24px] text-tab leading-tab'>
               {logoutTitle}
             </button>
           </div>
         </div>
       </header>
-      <main className='mx-auto mb-[36px] flex w-full max-w-[1200px] flex-col'>
+      <main className='mx-auto mb-[36px] flex w-full max-w-[1264px] flex-col px-[32px]'>
         <h1 className='mb-[32px] mt-[36px] text-title font-bold leading-title'>
           {title}
         </h1>
-        <div className='flex min-h-[618px] gap-[34px]'>
+        <div className='flex min-h-[618px] flex-col gap-[34px] lg:flex-row'>
           <section className='flex flex-auto flex-col rounded-[30px] bg-white shadow-card'>
             <ExpenseTable />
           </section>
