@@ -23,15 +23,15 @@ export function ExpenseForm() {
       onSubmit={handleSubmit(addExpense)}
     >
       <label className='flex flex-col gap-[16px]'>
-        <h3 className='text-big leading-big font-semibold'>Описание</h3>
+        <h3 className='text-big font-semibold leading-big'>Описание</h3>
         <input
           {...register('description')}
-          className='border-border h-[39px] rounded-[6px] border-[1px] p-[12px]'
+          className='h-[39px] rounded-[6px] border-[1px] border-border p-[12px]'
           placeholder='Введите описание'
         />
       </label>
       <div className='flex flex-col gap-[16px]'>
-        <h3 className='text-big leading-big font-semibold'>Категория</h3>
+        <h3 className='text-big font-semibold leading-big'>Категория</h3>
         <div className='flex flex-wrap gap-[6px]'>
           {Object.values<Tags>(Tags).map((tag) => (
             <div
@@ -54,7 +54,7 @@ export function ExpenseForm() {
         </div>
       </div>
       <label className='flex flex-col gap-[16px]'>
-        <h3 className='text-big leading-big font-semibold'>Дата</h3>
+        <h3 className='text-big font-semibold leading-big'>Дата</h3>
         <Controller
           control={control}
           name='date'
@@ -68,7 +68,7 @@ export function ExpenseForm() {
         />
       </label>
       <label className='flex flex-col gap-[16px]'>
-        <h3 className='text-big leading-big font-semibold'>Сумма</h3>
+        <h3 className='text-big font-semibold leading-big'>Сумма</h3>
         <Controller
           control={control}
           name='sum'
@@ -82,7 +82,7 @@ export function ExpenseForm() {
           )}
         />
       </label>
-      <button className='text-normal rounded-[6px] bg-primary p-[12px] font-normal leading-normal text-white'>
+      <button className='rounded-[6px] bg-primary p-[12px] text-normal font-normal leading-normal text-white'>
         Добавить новый расход
       </button>
     </form>
@@ -93,7 +93,7 @@ const CustomSumInput = (props: InputAttributes) => {
   return (
     <input
       {...props}
-      className='border-border h-[39px] rounded-[6px] border-[1px] p-[12px]'
+      className='h-[39px] rounded-[6px] border-[1px] border-border p-[12px]'
       placeholder='Введите сумму'
     />
   );
@@ -103,7 +103,7 @@ const CustomDateInput = (props: InputAttributes) => {
   return (
     <input
       {...props}
-      className='border-border h-[39px] rounded-[6px] border-[1px] p-[12px]'
+      className='h-[39px] rounded-[6px] border-[1px] border-border p-[12px]'
       placeholder='Введите дату'
     />
   );

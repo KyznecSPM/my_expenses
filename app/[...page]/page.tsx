@@ -30,10 +30,10 @@ export default function Home() {
           {title}
         </h1>
         <div className='flex min-h-[618px] gap-[34px]'>
-          <section className='shadow-card flex flex-auto flex-col rounded-[30px] bg-white'>
+          <section className='flex flex-auto flex-col rounded-[30px] bg-white shadow-card'>
             <ExpenseTable />
           </section>
-          <section className='shadow-card flex w-[379px] flex-initial flex-col gap-[24px] rounded-[30px] bg-white p-[32px]'>
+          <section className='flex w-[379px] flex-initial flex-col gap-[24px] rounded-[30px] bg-white p-[32px] shadow-card'>
             <h2 className='text-subtitle font-bold leading-subtitle'>
               {formTitle}
             </h2>

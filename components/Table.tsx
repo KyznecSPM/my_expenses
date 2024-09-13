@@ -53,7 +53,7 @@ export function Table<T extends TableData>({
             {columns.map((column) => (
               <th
                 key={column.key}
-                className='text-border text-normal px-[32px] py-[6px] text-left font-normal leading-normal'
+                className='px-[32px] py-[6px] text-left text-normal font-normal leading-normal text-border'
               >
                 {column.title}
               </th>
@@ -68,7 +68,7 @@ export function Table<T extends TableData>({
           </tr>
           <tr>
             <th
-              className='bg-border h-[1px] p-0'
+              className='h-[1px] bg-border p-0'
               colSpan={columns.length + 1}
             />
           </tr>
@@ -79,7 +79,7 @@ export function Table<T extends TableData>({
               {columns.map(({ key, render }) => (
                 <td
                   key={key}
-                  className='text-normal px-[32px] py-[7px] font-normal leading-normal'
+                  className='px-[32px] py-[7px] text-normal font-normal leading-normal'
                 >
                   {/* @ts-expect-error */}
                   {render ? render(row[key]) : row[key]}
