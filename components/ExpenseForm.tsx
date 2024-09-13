@@ -39,7 +39,7 @@ export function ExpenseForm() {
               tabIndex={0}
               aria-label={tagsTitles.get(tag)}
               aria-selected={activeTag === tag}
-              className={`flex cursor-pointer items-center gap-[12px] rounded-[30px] bg-${activeTag === tag ? 'primary' : 'background'} px-[20px] py-[8px]`}
+              className={`flex cursor-pointer items-center gap-[12px] rounded-[30px] ${activeTag === tag ? 'bg-primary' : 'bg-background'} px-[20px] py-[8px]`}
               onClick={() => setValue('category', tag)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter') setValue('category', tag);
